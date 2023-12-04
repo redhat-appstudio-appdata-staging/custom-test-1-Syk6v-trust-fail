@@ -25,7 +25,7 @@ spec:
         app.kubernetes.io/instance: java-sample-custom-test
     spec:
       containers:
-      - image: java-quarkus-image:latest
+      - image: quay.io/redhat-user-workloads-stage/mdsaud-tenant/custom-test-1/java-sample-custom-test@sha256:0d76bb572aff0cadfcb4729d83619cebaf2dc6da046d984fcf5a4535209d386f
         name: my-java-quarkus
         ports:
         - containerPort: 8081
