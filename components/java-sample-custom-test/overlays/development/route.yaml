@@ -1,0 +1,22 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: java-sample-custom-test
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: java-sample-custom-test
+    app.kubernetes.io/part-of: custom-test-1
+  name: java-sample-custom-testfofy
+spec:
+  port:
+    targetPort: 8081
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: java-sample-custom-test
+    weight: 100
+status: {}
