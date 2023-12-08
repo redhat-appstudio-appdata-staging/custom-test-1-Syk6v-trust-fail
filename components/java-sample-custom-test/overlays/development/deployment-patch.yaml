@@ -4,6 +4,7 @@ metadata:
   creationTimestamp: null
   name: java-sample-custom-test
 spec:
+  replicas: 1
   selector: {}
   strategy: {}
   template:
